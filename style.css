@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @font-face {
     font-family: 'Helvetica';
-    src: url('HelveticaNowDisplay-Bold.ttf') format(truetype);
+    src: url(font/HelveticaNowDisplay-Bold.ttf) format(truetype);
     font-weight: bold;
     font-style: italic;
 }
@@ -47,11 +47,7 @@ nav {
     margin-left: 32px;
 }
 
-.verduras {
-    width: 100%;
-    height: auto;
-    background: url(img/verduras.png);    
-}
+
 
 section {
     position: relative;
@@ -59,6 +55,19 @@ section {
     height: 100vh;
     background: #ffde59;
 }
+
+.section1 {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  background-color: #ffde59;
+  background-image: url(img/verduras.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain; /* ajusta a imagem sem cortar */
+  background-attachment: scroll; /* rola junto com a página */
+}
+
 
 
 
@@ -70,7 +79,7 @@ section {
     height: 100px;
     background: url(img/wave.png);
     background-size: 1000px 100px;
-    animation: animate 4s ease-in-out infinite;
+    animation: animate 3s ease-in-out infinite;
     animation-delay: calc(var(--i) * 0.25s);
 }
 .wave#wave1 {
@@ -103,6 +112,7 @@ section {
 }
 .titulo {
     font-family: 'Helvetica', Times, serif;
+    margin-top: 3vh;
     padding-left: 100px;
     letter-spacing: -15px
 }
@@ -111,7 +121,7 @@ section {
     text-shadow: 2px 2px 4px rgb(126, 126, 126);
     padding-top: 0%;
     padding-bottom: 0%;
-    margin-top: 50px;
+    margin-top: calc(50px + 7vh);;
     margin-bottom: -100px;
     font-size: 10em;
 } 
@@ -127,11 +137,13 @@ section {
 .subtitulo {
     color: #fcfaf9;
     font-family: 'DM Sans', sans-serif;
-    padding-left: 100px;
     font-size: 1.5em;
     background-color: #253238;
-    border-radius: 20px;
+    border-radius: 9999px;
     display: inline-block;
+    margin-top: 1vh;
+    margin-left: 100px;
+    padding: 4px 12px;
 }
 
 .sec {
