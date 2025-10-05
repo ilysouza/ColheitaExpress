@@ -1,0 +1,76 @@
+.produto-detalhe {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 130px 9% 30px;
+}
+
+.produto-detalhe .produto-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 550px;
+    overflow: hidden;
+}
+
+.produto-detalhe .produto-img img {
+    width: 100%;
+    height: none;
+    object-fit: contain;
+    max-width: 800px;
+}
+
+.produto-detalhe .title {
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.produto-detalhe .rating i {
+    color: #e35f26;
+}
+
+.produto-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.compra {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* espaço entre preço e botão */
+  margin-top: 15px;
+}
+
+.price {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
+.btn {
+  padding: 12px 30px;
+  background: #222;
+  border: none;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 9999px;
+  margin-bottom: 200px;
+}
+
+.produto-detalhe .detailVen {
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+.produto-detalhe .detailLoc {
+    padding-top: 2px;
+}
+
+.produto-detalhe .detailVen p {
+    margin: 3px 0;
+}
+.produto-detalhe .detailLoc p {
+    margin: 1px 0;
+}

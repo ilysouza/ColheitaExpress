@@ -8,7 +8,9 @@
     initial-scale=1, minimum-scale=1">
     <title>Colheita Express</title>
 
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/inicio.css">
+
     <script src="https://kit.fontawesome.com/d8f5b3aec3.js" crossorigin="anonymous"></script>
 </head>
 
@@ -17,11 +19,13 @@
   <nav>
     <a class="logo">Colheita Express</a>
       <ul class="nav-list">
-      <li><a href="inicio.html">Inicio</a></li>
+      <li><a href="index.html">Inicio</a></li>
       <li><a href="produtores.html">Produtores</a></li>
       <li><a href="contato.html">Contato</a></li>
       <li><a href="perfil.html">Perfil</a></li>
-      <li><a href="carrinho.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+      <li><a href="carrinho.html" class="carrinho-icon">
+        <i class="fa-solid fa-cart-shopping"></i>
+      <span class="carrinho-item-count"></span></a></li>
       <li><a href="configuracoes.html"><i class="fa-solid fa-gear"></i></a></li>
     </ul>
   </nav>
@@ -39,11 +43,6 @@
     <div class="wave" id="wave4" style="--i:4;"></div>
 </section>
 
-<div class="sec">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</div>
-
 <script>
     let wave1 = document.getElementById('wave1');
     let wave2 = document.getElementById('wave2');
@@ -59,6 +58,29 @@
         wave4.style.backgroundPositionX = 100 + value * -1 + 'px';
     })
 </script>
+
+<div class="conteiner">
+  <span class="textbrd">Descubra sabores autênticos da sua região.</span>
+</div>
+
+<div class="botoes">
+<a class="b" href="#" style="--clr:#ffbd59"><span>Frutas</span></a>
+<a class="b" href="#" style="--clr:#ffbd59"><span>Verduras</span></a>
+<a class="b" href="#" style="--clr:#ffbd59"><span>Legumes</span></a>
+<a class="b" href="#" style="--clr:#ffbd59"><span>Grãos</span></a>
+<a class="b" href="#" style="--clr:#ffbd59"><span>Cereais</span></a>
+<a class="b" href="#" style="--clr:#ffbd59"><span>Ervas</span></a>
+<a class="b" href="#" style="--clr:#ffbd59"><span>Temperos</span></a>
+<a class="b" href="#" style="--clr:#ffbd59"><span>Produtos derivados</span></a>
+</div>
+
+<section class="produtos-collection">
+    <div class="produtos-lista"></div>
+</section>
+
+<script src="../products.js"></script>
+<script src="../script.js"></script>
+
     
 </body>
 
