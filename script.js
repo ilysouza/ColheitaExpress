@@ -30,28 +30,50 @@ function displayProducts() {
 
 function displayProductDetail() {
     const productData = JSON.parse(sessionStorage.getItem("selectedProduct"));
+    if (!productData) return;
 
     const titleEl = document.querySelector(".title");
     const priceEl = document.querySelector(".price");
     const descriptionEl = document.querySelector(".description");
     const imageContainer = document.querySelector(".image");
-    const addToCartBtn = document.querySelector(".add-cartbtn");
-    const producerEl = document.querySelector(".detailVen");
-    const localEl = document.querySelector(".detailLoc");
+    const addToCartBtn = document.querySelector("#add-cartbtn"); // corrigido o seletor
+    const producerEl = document.querySelector(".detailVen p");
+    const localEl = document.querySelector(".detailLoc p");
 
+    // Mostra imagem
     if (productData.image) {
         imageContainer.innerHTML = `<img src="${productData.image}" alt="${productData.title}">`;
     }
 
+    // Mostra texto
     titleEl.textContent = productData.title;
     priceEl.textContent = productData.price;
     descriptionEl.textContent = productData.description;
-    producerEl.textContent = productData.detailVen;
-    localEl.textContent = productData.detailLoc;
+    producerEl.textContent = `Vendedor: ${productData.producer}`;
+    localEl.textContent = `Local: ${productData.local}`;
 
-    updateProductDisplay(selectedColor);
-
+    // Botão do carrinho
     addToCartBtn.addEventListener("click", () => {
-        addToCartBtn(productData)
+        addToCart(productData);
     });
+}
+
+function addToCart(product) {
+    let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
+
+    const existingItem = cart.find(item => item.id === product.id);
+
+    if (existingItem) {
+        existingItem.quantity += 1;
+    } else {
+        cert.push({
+            id: product.id,
+            title: product.title,
+            price: product.price,
+            image: color.image,
+            quantity: 1
+        });
+    }
+
+    sessionStorage.setItem("cart", JSON.stringify(cart));
 }

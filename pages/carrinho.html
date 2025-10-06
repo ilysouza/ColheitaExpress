@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,
     initial-scale=1, minimum-scale=1">
-    <title>Colheita Express</title>
+    <title>Carrinho</title>
 
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/carrinho.css">
@@ -31,6 +31,41 @@
     </ul>
   </nav>
 </header>
+
+  <div class="cart">
+    <div class="cart-header">
+      <span>Produtos</span>
+      <span>Preço</span>
+      <span>Quantidade</span>
+      <span>Total</span>
+      <span>Remover</span>
+    </div>
+
+    <div class="cart-items">
+      <div class="cart-item">
+        <div class="product">
+          <img src="https://ceagesp.gov.br/wp-content/uploads/2017/06/Banana-Nanica-28.9.2011-645-600x400.jpg">
+          <div class="item-detail">
+            <p>Banana Nanica</p>
+          </div>
+        </div>
+        <span class="price">R$ 5.00</span>
+        <div class="quantity"><input type="number" value="1" min="1"></div>
+        <span class="total-price">R$ 5.00</span>
+        <button class="remove"><i class="ri-close-line"></i></button>
+      </div>
+    </div>
+
+    <div class="cart-total">
+      <h3>Total Carrinho</h3>
+      <p>Subtotal <span class="subtotal">R$ 0</span></p>
+      <p>Taxa de entrega<span>Grátis</span></p>
+      <p>Total Geral <span class="grand-total">R$ 0</span></p>
+      
+    </div>
+  </div>
+
+<script src="../script.js"></script>
 
 </body>
 

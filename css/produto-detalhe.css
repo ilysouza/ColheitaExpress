@@ -18,6 +18,7 @@
     height: none;
     object-fit: contain;
     max-width: 800px;
+    border: #222;
 }
 
 .produto-detalhe .title {
